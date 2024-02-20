@@ -1,4 +1,4 @@
-"// Вираз true + false обчислюється в JavaScript." 
-"// JavaScript автоматично конвертує true в 1 та false в 0 п?д час виконання арифметичних операц?й." 
-"// Таким чином, true + false стає 1 + 0." 
-"// Отже, результатом ц?єї операц?ї буде 1." 
+"// The expression true + false will be evaluated in JavaScript." 
+"// JavaScript automatically converts true to 1 and false to 0 when performing arithmetic operations." 
+"// So, true + false becomes 1 + 0." 
+"// Therefore, the result of this operation will be 1." 
