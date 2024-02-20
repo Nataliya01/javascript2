@@ -1,4 +1,4 @@
-"// The expression 12 / '6' will divide the number 12 by the string '6'." 
-"// In JavaScript, when a string is used in arithmetic operations, it is first converted to a number." 
-"// Therefore, the string '6' will be converted to the number 6, and then the division 12 / 6 will be performed, resulting in 2." 
-"// Therefore, the result will be the number 2." 
+"// The expression '10' + (5 === 6) is evaluated in two stages:" 
+"// The expression (5 === 6) evaluates to false, because 5 is not equal to 6." 
+"// Then, string concatenation is performed, where '10' is concatenated with the result of the previous step." 
+"// Therefore, the result will be the string '10false'." 
