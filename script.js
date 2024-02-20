@@ -1,0 +1,6 @@
+"// String concatenation operation in JavaScript." 
+"// First operand - the string \"number\"." 
+"// JavaScript initially converts numbers to strings." 
+"// Thus, \"number\" + 3 becomes \"number3\"." 
+"// Then, \"number3\" + 3 is added to the number 3, resulting in \"number33\"." 
+"// Now, let's examine the expression: number' + 3 + 3" 
