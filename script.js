@@ -1,4 +1,4 @@
-"// The expression 3 ** (9 / 3) calculates the exponentiation of 3 raised to the power computed as the result of dividing 9 by 3." 
-"// The division 9 / 3 evaluates to 3." 
-"// Then exponentiation is performed: 3 ** 3, which equals 27." 
-"// Therefore, the result of this expression will be 27." 
+"// The expression !!'false' == !!'true' checks if the result of two logical operations !! for the strings 'false' and 'true' is the same." 
+"// !!'false' converts the string 'false' into a boolean value. Any non-empty string, except for the string '0', is considered true. Therefore, the first operation will be true." 
+"// !!'true' similarly converts the string 'true' into a boolean value, which will also be true." 
+"// So, comparing true == true, we get true." 
