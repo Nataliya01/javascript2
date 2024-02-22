@@ -1,0 +1,16 @@
+var ageInput = prompt("Enter your age");
+var age = parseInt(ageInput);
+
+if (!isNaN(age) && age >= 0) {
+    var message;
+    if (age === 1) {
+        message = "year";
+    } else if (age > 1 && age < 5) {
+        message = "years";
+    } else {
+        message = "years";
+    }
+    console.log(age + " " + message);
+} else {
+    console.log("Invalid age value entered");
+}
