@@ -1,0 +1,50 @@
+UA
+
+function convertUnits(unit, value) {
+    let result;
+    switch (unit) {
+        case 'км':
+            result = value * 1000; // Кілометри в метри
+            return value + ' км це ' + result + ' м.';
+        case 'год':
+            result = value * 60; // Години в хвилини
+            return value + ' год це ' + result + ' хв.';
+        case 'кг':
+            result = value * 1000; // Кілограми в грами
+            return value + ' кг це ' + result + ' гр.';
+        default:
+            return "Невідома одиниця вимірювання";
+    }
+}
+
+
+console.log(convertUnits('км', 10)); 
+console.log(convertUnits('год', 1)); 
+console.log(convertUnits('кг', 1));  
+console.log(convertUnits('л', 5)); 
+
+
+EN 
+
+function convertUnits(unit, value) {
+    let result;
+    switch (unit) {
+        case 'км':
+            result = value * 1000; 
+            return value + ' km is ' + result + ' m.';
+        case 'год':
+            result = value * 60; 
+            return value + ' hour is ' + result + ' min.';
+        case 'кг':
+            result = value * 1000; 
+            return value + ' kg is ' + result + ' g.';
+        default:
+            return "Unknown unit of measurement";
+    }
+}
+
+
+console.log(convertUnits('км', 10)); 
+console.log(convertUnits('год', 1)); 
+console.log(convertUnits('кг', 1));  
+console.log(convertUnits('л', 5));   
