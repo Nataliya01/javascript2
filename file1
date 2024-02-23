@@ -29,13 +29,13 @@ EN
 function convertUnits(unit, value) {
     let result;
     switch (unit) {
-        case 'ךל':
+        case 'km':
             result = value * 1000; 
             return value + ' km is ' + result + ' m.';
-        case 'דמה':
+        case 'h':
             result = value * 60; 
             return value + ' hour is ' + result + ' min.';
-        case 'ךד':
+        case 'kg':
             result = value * 1000; 
             return value + ' kg is ' + result + ' g.';
         default:
