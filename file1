@@ -44,7 +44,7 @@ function convertUnits(unit, value) {
 }
 
 
-console.log(convertUnits('ךל', 10)); 
-console.log(convertUnits('דמה', 1)); 
-console.log(convertUnits('ךד', 1));  
-console.log(convertUnits('כ', 5));   
+console.log(convertUnits('km', 10)); 
+console.log(convertUnits('h', 1)); 
+console.log(convertUnits('kg', 1));  
+console.log(convertUnits('l', 5));   
