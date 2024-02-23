@@ -32,3 +32,21 @@ if (!isNaN(age) && age >= 0) {
 } else {
     console.log("Ââåäåíî íåêîğåêòíå çíà÷åííÿ â³êó");
 }
+
+
+var age = parseInt(prompt("Âêàæ³òü âàø â³ê"));
+
+if (!isNaN(age) && age >= 0) {
+    let rest10 = age % 10;
+    let rest100 = age % 100;
+
+    if (age === 1 || (rest10 === 1 && rest100 !== 11)) {
+        console.log(age + " " + "ğ³ê");
+    } else if (rest10 >= 2 && rest10 <= 4 && !(rest100 >= 12 && rest100 <= 14)) {
+        console.log(age + " " + "ğîêè");
+    } else {
+        console.log(age + " " + "ğîê³â");
+    }
+} else {
+    console.log("Ââåäåíî íåêîğåêòíå çíà÷åííÿ â³êó");
+}
