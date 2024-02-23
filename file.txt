@@ -14,3 +14,21 @@ if (!isNaN(age) && age >= 0) {
 } else {
     console.log("Invalid age value entered");
 }
+
+var ageInput = prompt("Âêàæ³òü âàø â³ê");
+var age = parseInt(ageInput);
+
+// Ïåğåâ³ğÿºìî, ÷è ââåäåíî ÷èñëî òà ÷è âîíî íå â³ä'ºìíå
+if (!isNaN(age) && age >= 0) {
+    var message;
+    if (age === 1) {
+        message = "ğ³ê";
+    } else if (age > 1 && age < 5) {
+        message = "ğîêè";
+    } else {
+        message = "ğîê³â";
+    }
+    console.log(age + " " + message);
+} else {
+    console.log("Ââåäåíî íåêîğåêòíå çíà÷åííÿ â³êó");
+}
