@@ -59,38 +59,38 @@ function convertUnits (unit, value) {
 
     switch (unit) {
     case "км":
-        return "" + value + "км це " + value * 1000 + "м.";
+        return "" + value + "km is " + value * 1000 + "m.";
     case "год":
-        return "" + value + "год це " + value * 60 + "хв.";
+        return "" + value + "h is " + value * 60 + "min.";
     case "кг":
-        return "" + value + "кг це " + value * 1000 + "гр.";
+        return "" + value + "kg is " + value * 1000 + "gr.";
     default:
-        return "Невідома одиниця вимірювання";
+        return "Unknown unit of measurement";
     }
 }
-console.log(convertUnits("км", 10));
-console.log(convertUnits("год", 1));
-console.log(convertUnits("кг", 1));
-console.log(convertUnits("л", 5));
+console.log(convertUnits("km", 10));
+console.log(convertUnits("h", 1));
+console.log(convertUnits("kg", 1));
+console.log(convertUnits("l", 5));
 
 
 
 4) EN 
 
 function convertUnits (unit, value) {
-    let result = "Невідома одиниця вимірювання";
+    let result = "Unknown unit of measurement";
 
     switch (unit) {
     case "км":
-        result = "" + value + "км це " + value * 1000 + "м.";
+        result = "" + value + "km is " + value * 1000 + "m.";
     case "год":
-        result = "" + value + "год це " + value * 60 + "хв.";
+        result = "" + value + "h is " + value * 60 + "min.";
     case "кг":
-        result = "" + value + "кг це " + value * 1000 + "гр.";
+        result = "" + value + "kg is " + value * 1000 + "gr.";
     }
     return result;
 }
-console.log(convertUnits("км", 10));
-console.log(convertUnits("год", 1));
-console.log(convertUnits("кг", 1));
-console.log(convertUnits("л", 5));
+console.log(convertUnits("km", 10));
+console.log(convertUnits("h", 1));
+console.log(convertUnits("kg", 1));
+console.log(convertUnits("l", 5));
