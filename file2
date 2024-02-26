@@ -1,0 +1,27 @@
+HW1
+
+1) function drawTriangle(height, symbol) {
+    for (let i = 1; i <= height; i++) {
+        let row = '';
+        for (let j = 0; j < i; j++) {
+            row += symbol;
+        }
+        console.log(row);
+    }
+}
+
+drawTriangle(5, '*');
+
+
+2) function drawTriangle(height, symbol) {
+    let i = 1;
+    let row = '';
+    while (i <= height) {
+        row += symbol; 
+        console.log(row); 
+        i++; // 
+    }
+}
+
+
+drawTriangle(5, '*');
