@@ -41,3 +41,36 @@ let result = str;
 
 console.log(pad('qwerty', '+', 8, true));  "++qwerty"
 console.log(pad('qwerty', '+', 8, false));  "qwerty++"
+
+
+HW 3
+
+function getRnd (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function check (count) {
+    let countEven = 0;
+    let countOdd = 0;
+
+    for (let i = 0; i < count; i++) {
+        let num = getRnd(100, 1000);
+
+        if (num % 2 === 0) {
+            countEven++;
+        } else {
+            countOdd++;
+        }
+    }
+
+    let evenPercent = (countEven / count) * 100;
+    let oddPercent = (countOdd / count) * 100;
+
+    console.log("Total numbers generated: " + count);
+    console.log("Even numbers: " + countEven);
+    console.log("Odd numbers: " + countOdd);
+    console.log("Percentage of even to odd:");
+    console.log(evenPercent.toFixed(2) + "% to " + oddPercent.toFixed(2) + "%");
+}
+
+check(100);
