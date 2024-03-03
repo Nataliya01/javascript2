@@ -1,13 +1,5 @@
 HW 1
 
-function myIsNaN(num) {
- return num !== num;
-}
-console.log(myIsNaN('Hello')); true
-console.log(myIsNaN('123'));   false
-console.log(myIsNaN(NaN));     true
-console.log(myIsNaN(123));     false
-
 
 function myIsNaN (num) {
     if (typeof num !== "number") {
