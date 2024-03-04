@@ -1,0 +1,23 @@
+HW 1 
+
+var person = {
+    name: "Ivan",
+    age: 30,
+    city: "Kiev"
+};
+
+
+person.getInfo = function() {
+        for (var prop in this) {
+        if (typeof this[prop] !== 'function') {
+            
+            console.log(prop + ": " + this[prop]);
+        }
+    }
+};
+
+person.newProperty = 'New property!';
+person.getInfo(); 
+
+
+
