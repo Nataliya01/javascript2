@@ -20,4 +20,60 @@ person.newProperty = 'New property!';
 person.getInfo(); 
 
 
+HW 2
+
+var services = {
+    "стрічка": "60 грн",
+    "гоління": "80 грн",
+    "Миття голови": "100 грн"
+};
+services["Розбити скло"] = "200 грн";
+//console.log(services);
+services.price = function () {
+    let total = 0;
+
+    for (let key in this) {
+        let price = parseFloat(this[key]);
+        if (!isNaN(price)) {
+            total += price;
+        }
+    }
+
+    return total;
+};
+
+services.minPrice = function () {
+    let min = Infinity;
+
+    for (let key in this) {
+        let price = parseFloat(this[key]);
+        if (!isNaN(price)) {
+        //if (price !== NaN) {
+            if (price < min) {
+                min = price;
+            }
+        }
+    }
+
+    return min;
+};
+
+services.maxPrice = function () {
+    let max = -Infinity;
+
+    for (let key in this) {
+        let price = parseFloat(this[key]);
+        if (!isNaN(price)) {
+            if (price > max) {
+                max = price;
+            }
+        }
+    }
+
+    return max;
+};
+
+console.log("Загальна вартість послуг:", services.price() + " грн");
+console.log("Мінімальна вартість послуг:", services.minPrice() + " грн");
+console.log("Максимальна вартість послуг:", services.maxPrice() + " грн");
 
