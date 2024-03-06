@@ -1,0 +1,54 @@
+HW1
+
+1) function drawTriangle(height, symbol) {
+    for (let i = 1; i <= height; i++) {
+        let row = '';
+        for (let j = 0; j < i; j++) {
+            row += symbol;
+        }
+        console.log(row);
+    }
+}
+
+drawTriangle(5, '*');
+
+
+2) function drawTriangle(height, symbol) {
+    let i = 1;
+    let row = '';
+    while (i <= height) {
+        row += symbol; 
+        console.log(row); 
+        i++; // 
+    }
+}
+
+
+drawTriangle(5, '*');
+
+
+
+HW2
+
+let sum = 0;
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 !== 0) { 
+        sum += i;  
+    }
+}
+console.log(sum); 
+
+
+HW3
+
+
+function pow(x, y) {
+    let result = 1;
+    for (let i = 0; i < y; i++) {
+        result *= x;
+    }
+    return result;
+}
+
+
+console.log(pow(2, 3));
