@@ -1,0 +1,78 @@
+HW 1 
+
+var person = {
+    name: "Ivan",
+    age: 30,
+    city: "Kiev"
+};
+
+
+person.getInfo = function() {
+        for (var prop in this) {
+        if (typeof this[prop] !== 'function') {
+            
+            console.log(prop + ": " + this[prop]);
+        }
+    }
+};
+
+person.newProperty = 'New property!';
+person.getInfo(); 
+
+
+HW 2
+
+var services = {
+    "haircut": "60 UAH",
+    "shaving": "80 UAH",
+    "Head washing": "100 UAH"
+};
+services["Broken glass"] = "200 UAH";
+//console.log(services);
+services.price = function () {
+    let total = 0;
+
+    for (let key in this) {
+        let price = parseFloat(this[key]);
+        if (!isNaN(price)) {
+            total += price;
+        }
+    }
+
+    return total;
+};
+
+services.minPrice = function () {
+    let min = Infinity;
+
+    for (let key in this) {
+        let price = parseFloat(this[key]);
+        if (!isNaN(price)) {
+        //if (price !== NaN) {
+            if (price < min) {
+                min = price;
+            }
+        }
+    }
+
+    return min;
+};
+
+services.maxPrice = function () {
+    let max = -Infinity;
+
+    for (let key in this) {
+        let price = parseFloat(this[key]);
+        if (!isNaN(price)) {
+            if (price > max) {
+                max = price;
+            }
+        }
+    }
+
+    return max;
+};
+
+console.log("Total cost of services:", services.price() + " UAH");
+console.log("Minimum service cost:", services.minPrice() + " UAH");
+console.log("Maximum service cost:", services.maxPrice() + " UAH");
