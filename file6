@@ -23,3 +23,89 @@ function myBlend(arr) {
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 myBlend(arr);
 console.log(arr);
+
+
+HW 2
+
+const company = {
+    name: 'Big Company',
+    type:'Main company',
+    platform: 'Ticket selling platform',
+    sellsSolution: 'Ticket selling solution',
+    clients: [
+        {
+            name: 'Client 1',
+            type: 'subCompany',
+            uses: 'Software for ticket selling',
+            sells: 'Ticket selling solution',
+            partners: [
+                {
+                    name: 'Client 1.1',
+                    type: 'subSubCompany',
+                    uses: 'Ticket selling solution',
+                    sells: 'Ticket selling solution',
+                },
+                {
+                    name: 'Client 1.2',
+                    type: 'subSubCompany',
+                    uses: 'Ticket selling solution',
+                    sells: 'Ticket selling solution',
+                    partners: [
+                        {
+                            name: 'Client 1.2.3',
+                            type: 'subSubCompany',
+                            uses: 'Ticket selling solution',
+                            sells: 'Ticket selling solution',
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: 'Client 2',
+            type: 'subCompany',
+            uses: 'Software for ticket selling',
+            sells: 'Ticket selling solution'
+        }
+    ]
+};
+
+function findValueByKey(companyName, obj) {
+    if (!obj) {
+        return false; 
+    }
+
+    if (obj.name === companyName) {
+        console.log("Company information:", obj);
+        return true; 
+    }
+
+    if (obj.clients) {
+        for (let client of obj.clients) {
+            if (findValueByKey(companyName, client)) {
+                return true; 
+            }
+        }
+    }
+
+    if (obj.partners) {
+        for (let partner of obj.partners) {
+            if (findValueByKey(companyName, partner)) {
+                return true; 
+            }
+        }
+    }
+
+    return false; 
+}
+
+
+findValueByKey('Client 1', company);
+
+findValueByKey('Client 1.1', company);
+
+findValueByKey('Client 1.2', company);
+
+findValueByKey('Client 1.2.3', company);
+
+findValueByKey('Client 2', company);
