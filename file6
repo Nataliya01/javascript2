@@ -122,3 +122,45 @@ findValueByKey('Client 1.2', company);
 findValueByKey('Client 1.2.3', company);
 
 findValueByKey('Client 2', company);
+
+
+
+
+
+function findValueByKey(companyName, obj) {
+    if (!obj) {
+        return false;
+    }
+
+    if (obj.name === companyName) {
+        return obj;
+    }
+
+    if (obj.clients) {
+        for (let client of obj.clients) {
+            const result = findValueByKey(companyName, client);
+            if (result) {
+                return result;
+            }
+        }
+    }
+
+    if (obj.partners) {
+        for (let partner of obj.partners) {
+            const result = findValueByKey(companyName, partner);
+            if (result) {
+                return result;
+            }
+        }
+    }
+
+    return false;
+}
+
+
+const foundCompany = findValueByKey('Client 1', company);
+if (foundCompany) {
+    console.log("Company information:", foundCompany);
+} else {
+    console.log("Company not found.");
+}
