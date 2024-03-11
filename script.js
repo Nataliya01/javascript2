@@ -1,0 +1,7 @@
+"// The expression (+null == false) < 1 ** 5 is evaluated as follows:" 
+"// First, +null is converted to a number, which equals 0." 
+"// Then, the expression 0 == false checks if 0 is equal to false. Since 0 is coerced to false in value comparison context, this is true." 
+"// The result of the first comparison, which is true, is then compared to 1 ** 5." 
+"// 1 ** 5 evaluates to 1, as any number raised to the power of 1 equals itself." 
+"// Comparing true with 1, which is true." 
+"// Therefore, the result of this expression will be true." 
