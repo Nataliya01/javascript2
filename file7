@@ -1,0 +1,8 @@
+HW 1 
+const text = "Python";
+const regex = /[^Aa]{6,}/;
+const result = regex.test(text);
+console.log(result); // true
+
+
+
